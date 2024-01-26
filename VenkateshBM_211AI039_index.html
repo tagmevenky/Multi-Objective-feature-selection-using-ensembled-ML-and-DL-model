@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ensemble Model GUI</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+            text-align: center;
+            background-color: #a1b675;
+        }
+
+        h1, h2, h4 {
+            color: #050000;
+        }
+
+        form {
+            max-width: 500px;
+            margin: auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        p {
+            font-weight: bold;
+            color: #333;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <img src="./nitk logo.jpg" alt="Logo" id="logo" style="max-width: 100px; max-height: 100px;">
+        <h1>Department of Information Technology</h1>
+    </div>
+    <h2>National Institute of Technology Karnataka, Surathkal - 575025</h2>
+    <h4>by: Venkatesh B M(211AI039) and Raghavendra (211AI029)</h4>
+    <h1>Ensemble Model GUI</h1>
+    
+    <form action="/predict" method="post">
+        <label for="feature1">DER_mass_transverse_met_lep:</label>
+        <input type="text" name="feature1" required>
+
+        <label for="feature2">DER_pt_h:</label>
+        <input type="text" name="feature2" required>
+
+        <label for="feature3">DER_pt_tot:</label>
+        <input type="text" name="feature3" required><br>
+
+        <label for="feature4">DER_mass_MMC:</label>
+        <input type="text" name="feature4" required><br>
+
+        <label for="feature5">DER_deltar_tau_lep:</label>
+        <input type="text" name="feature5" required><br>
+
+        <label for="feature6">PRI_met:</label>
+        <input type="text" name="feature6" required><br>
+
+        <label for="feature7">PRI_jet_all_pt:</label>
+        <input type="text" name="feature7" required><br>
+
+        <label for="feature8">PRI_jet_leading_phi:</label>
+        <input type="text" name="feature8" required><br>
+
+        <label for="feature9">PRI_jet_leading_eta:</label>
+        <input type="text" name="feature9" required><br>
+
+        <label for="feature10">PRI_met_sumet:</label>
+        <input type="text" name="feature10" required><br>
+
+        <label for="feature11">PRI_lep_phi:</label>
+        <input type="text" name="feature11" required><br>
+
+        <label for="feature12">DER_pt_ratio_lep_tau:</label>
+        <input type="text" name="feature12" required><br>
+
+        <label for="feature13">PRI_met_phi:</label>
+        <input type="text" name="feature13" required><br>
+
+        <label for="feature14">PRI_tau_eta:</label>
+        <input type="text" name="feature14" required><br>
+
+        <label for="feature15">PRI_lep_eta:</label>
+        <input type="text" name="feature15" required><br>
+
+        <label for="feature16">PRI_tau_phi:</label>
+        <input type="text" name="feature16" required><br>
+
+        <label for="feature17">DER_met_phi_centrality:</label>
+        <input type="text" name="feature17" required><br>
+
+        <label for="feature18">DER_mass_vis:</label>
+        <input type="text" name="feature18" required><br>
+
+        <label for="feature19">PRI_jet_num:</label>
+        <input type="text" name="feature19" required><br>
+
+        <label for="feature20">PRI_jet_leading_pt:</label>
+        <input type="text" name="feature20" required><br>
+
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if result %}
+        <p>{{ result }}</p>
+    {% endif %}
+</body>
+</html>
+
